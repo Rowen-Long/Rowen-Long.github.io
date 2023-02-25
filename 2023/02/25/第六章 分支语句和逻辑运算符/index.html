@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第六章 分支语句和逻辑运算符6.1 if 语句如果测试条件为true，则执行语句或语块（需用大括号）；否则不执行。 其语法与while类似，如下： 12if (test-condition)	statement    6.1.1 if else语句if else语句用于决定两条语句中执行哪一条，其语法如下： 1234if (test-condition)	statement1else	statem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第六章 分支语句和逻辑运算符6.1 if 语句如果测试条件为true，则执行语句或语块（需用大括号）；否则不执行。 其语法与while类似，如下： 12if (test-condition)	statement    6.1.1 if else语句if else语句用于决定两条语句中执行哪一条，其语法如下： 1234if (test-condition)	statement1else	statem">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-25T11:50:05.755Z">
+<meta property="article:modified_time" content="2023-01-28T09:14:01.372Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第六章 分支语句和逻辑运算符" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.755Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第六章-分支语句和逻辑运算符"><a href="#第六章-分支语句和逻辑运算符" class="headerlink" title="第六章 分支语句和逻辑运算符"></a>第六章 分支语句和逻辑运算符</h1><h2 id="6-1-if-语句"><a href="#6-1-if-语句" class="headerlink" title="6.1 if 语句"></a>6.1 if 语句</h2><p>如果测试条件为true，则执行语句或语块（需用大括号）；否则不执行。</p>
+<p>其语法与while类似，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (test-condition)</span><br><span class="line">	statement</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-1-1-if-else语句"><a href="#6-1-1-if-else语句" class="headerlink" title="6.1.1 if else语句"></a>6.1.1 if else语句</h3><p>if else语句用于决定两条语句中执行哪一条，其语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (test-condition)</span><br><span class="line">	statement1</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	statement2</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-1-2-if-else语句的格式化"><a href="#6-1-2-if-else语句的格式化" class="headerlink" title="6.1.2 if else语句的格式化"></a>6.1.2 if else语句的格式化</h3><p>需注意，if else的分号中有如下要求：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当没有语句块</span></span><br><span class="line"><span class="keyword">if</span> (ch == <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">	cout&lt;&lt;ch;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	cout&lt;&lt;++ch;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//当有语句块</span></span><br><span class="line"><span class="keyword">if</span> (ch == <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line">	zorro++</span><br><span class="line">	cout&lt;&lt;zorro;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	dull++</span><br><span class="line">	cout&lt;&lt;dull;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-1-3-if-else-if-else结构"><a href="#6-1-3-if-else-if-else结构" class="headerlink" title="6.1.3 if else if else结构"></a>6.1.3 if else if else结构</h3><p>实质为两个if else语句的嵌套，其语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> （ch == <span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">	a_grade++;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (ch == <span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">	b_grade++;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	soso++;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-2-逻辑表达式"><a href="#6-2-逻辑表达式" class="headerlink" title="6.2 逻辑表达式"></a>6.2 逻辑表达式</h2><p><strong>||<strong>表示</strong>或</strong>；**&amp;&amp;<strong>表示</strong>且<strong>；</strong>！<strong>（前置）表示</strong>非**。</p>
+<p><strong>||<strong>和</strong>&amp;&amp;<strong>的优先级都</strong>低于关系运算符</strong>，但**&amp;&amp;<strong>的优先级</strong>高于||**；</p>
+<p><strong>！</strong>的优先级<strong>高于所有算术和关系运算符</strong>。</p>
+<p><strong>||<strong>还可写成</strong>and</strong>；**&amp;&amp;<strong>还可写成</strong>or<strong>；</strong>！<strong>还可写成</strong>not**。</p>
+<h2 id="6-3-字符函数库-cctype"><a href="#6-3-字符函数库-cctype" class="headerlink" title="6.3 字符函数库 cctype"></a>6.3 字符函数库 cctype</h2><p>使用ctype头文件，用于判断字符。如isalpha（），若括号内的是字母，则返回1，否则为0。</p>
+<p>同理的，有如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isalnum</span>()<span class="comment">//字母或数字；</span></span><br><span class="line"><span class="built_in">isdigit</span>()<span class="comment">//0-9的数字；</span></span><br><span class="line"><span class="built_in">isgraph</span>()<span class="comment">//除空格外的打印字符；</span></span><br><span class="line"><span class="built_in">islower</span>()<span class="comment">//小写字母；</span></span><br><span class="line"><span class="built_in">isprint</span>()<span class="comment">//所有打印字符；</span></span><br><span class="line"><span class="built_in">ispunct</span>()<span class="comment">//标点符号；</span></span><br><span class="line"><span class="built_in">isspace</span>()<span class="comment">//标准空白字符，如空格、换行符等；</span></span><br><span class="line"><span class="built_in">tolower</span>()<span class="comment">//转换为小写字母；</span></span><br><span class="line"><span class="built_in">toupper</span>()<span class="comment">//转换为大写字母。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-4-？：运算符"><a href="#6-4-？：运算符" class="headerlink" title="6.4 ？：运算符"></a>6.4 ？：运算符</h2><p>常被用来替代if else运算符，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expression1 ? expression2 : expression3；</span><br></pre></td></tr></table></figure>
+
+<p>如果expression1为true，结果为expression2的值；否则为expression3的值。</p>
+<h2 id="6-5-switch语句"><a href="#6-5-switch语句" class="headerlink" title="6.5 switch语句"></a>6.5 switch语句</h2><p>用于从大型列表中进行选择，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (integer-expression)<span class="comment">//参数必须为整数表达式或者单个字符；</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">case</span> label1 : <span class="built_in">statement</span>(s)<span class="comment">//label必须为整数表达式或者单个字符，且必须为常量；</span></span><br><span class="line">	<span class="keyword">case</span> label2 : <span class="built_in">statement</span>(s)<span class="comment">//且statement中需要有break，否则会一直往下执行switch的语句，而不会跳到swtich之后的语句；</span></span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">default</span> : <span class="built_in">statement</span>(s)<span class="comment">//当参数没有匹配的label，跳到该行；若无该行，则执行switch之后的语句。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>注意，label还可以为枚举型，switch会将枚举提升为int类型，但参数不能为枚举型。</p>
+<p>switch与if else的区别在于前者的标签只能判断单个数值，而后者可以判断取值范围。</p>
+<h2 id="6-6-break-和-continue语句"><a href="#6-6-break-和-continue语句" class="headerlink" title="6.6 break 和 continue语句"></a>6.6 break 和 continue语句</h2><p>break可用于swtich和任何循环语句中，其功能为跳到switch或循环后面的语句处执行；</p>
+<p>continue可用于循环中，其功能为跳过循环体中余下的代码，并开始新一轮的循环（在for中会从更新表达式往下开始，在while中会跳过更新表达式）。</p>
+<h2 id="6-7-读取数字的循环"><a href="#6-7-读取数字的循环" class="headerlink" title="6.7 读取数字的循环"></a>6.7 读取数字的循环</h2><p>使用cin.clear()重置错误输入，再用cin.get()删除错误输入，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!(cin &gt;&gt; golf[i]))</span><br><span class="line">&#123;</span><br><span class="line">	cin.<span class="built_in">clear</span>();</span><br><span class="line">	<span class="keyword">while</span> (cin.<span class="built_in">get</span>() != <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Please enter a number: &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-8-简单文件输入-x2F-输出"><a href="#6-8-简单文件输入-x2F-输出" class="headerlink" title="6.8 简单文件输入&#x2F;输出"></a>6.8 简单文件输入&#x2F;输出</h2><h3 id="6-8-1文本输出"><a href="#6-8-1文本输出" class="headerlink" title="6.8.1文本输出"></a>6.8.1文本输出</h3><p>1.包含头文件fstream；</p>
+<p>2.创建一个ofstream对象；</p>
+<p>3.将该ofstream对象与一个文件关联起来；</p>
+<p>4.就像使用cout那样使用该ofstream对象；可类似使用cout&lt;&lt;fixed，即用普通方式输出、非科学计数法；和cout.precision(n),保留n位小数；和cout.setf()来改变输出格式等。变化只是把cout变为对象名如outfile。</p>
+<p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ofstream outfile;</span><br><span class="line">outfile.<span class="built_in">open</span>(<span class="string">&quot;fish.txt&quot;</span>);</span><br><span class="line"><span class="type">double</span> wt = <span class="number">12.2</span>;</span><br><span class="line">outfile&lt;&lt;wt;</span><br><span class="line">outfile.<span class="built_in">close</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-8-2-文本输入"><a href="#6-8-2-文本输入" class="headerlink" title="6.8.2 文本输入"></a>6.8.2 文本输入</h3><p>1.包含头文件fstream；</p>
+<p>2.创建一个ifstream对象；</p>
+<p>3.将该ifstream对象与一个文件关联起来；</p>
+<p>4.就像使用cin那样使用该ifstream对象，可结合使用getline（）、eof（）和fail（）等。</p>
+<p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ifstream infile;</span><br><span class="line">infile.<span class="built_in">open</span>(<span class="string">&quot;fish.txt&quot;</span>);</span><br><span class="line"><span class="type">double</span> wt;</span><br><span class="line">infile&gt;&gt;wt;</span><br></pre></td></tr></table></figure>
+
+<p>有如下方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">infile.<span class="built_in">is_open</span>()<span class="comment">//文件成功打开将放回true；</span></span><br><span class="line"><span class="comment">//因此，有如下程序：</span></span><br><span class="line"><span class="keyword">if</span> (!infile.<span class="built_in">is_open</span>())</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">exit</span>(EXIT_FAILURE);<span class="comment">//exit（）函数在头文件cstdlib中，使用EXIT_FAILURE参数，将在文件无法打开时终止程序。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也有如下方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">infile.<span class="built_in">good</span>()<span class="comment">//当程序能成功读入文件，返回true；</span></span><br><span class="line">infile.<span class="built_in">eof</span>()<span class="comment">//如果读取到EOF，将返回true；</span></span><br><span class="line">infile.<span class="built_in">fail</span>()<span class="comment">//如果读取的类型不匹配，返回true；</span></span><br><span class="line">infile.<span class="built_in">bad</span>()<span class="comment">//如果出现意外问题，返回true。</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="clejwi8xk0003jotxalje42vq" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

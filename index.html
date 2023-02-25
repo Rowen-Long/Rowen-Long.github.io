@@ -71,6 +71,461 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第四章 复合类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.757Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第四章-复合类型"><a href="#第四章-复合类型" class="headerlink" title="第四章 复合类型"></a>第四章 复合类型</h1><h2 id="1-数组"><a href="#1-数组" class="headerlink" title="1.数组"></a>1.数组</h2><p>数组能储存同一类型的多个数据，其声明如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typename</span> name[数据个数] = &#123;&#125;；</span><br><span class="line"><span class="keyword">typename</span>可以是<span class="type">int</span>、<span class="type">double</span>、<span class="type">char</span>、string等</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-结构"><a href="#2-结构" class="headerlink" title="2.结构"></a>2.结构</h2><p>结构可以储存不同类型的多个数据，其声明如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">name</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">typename</span> name；</span><br><span class="line">	typeneme name_1；</span><br><span class="line">&#125;；</span><br><span class="line"></span><br><span class="line">name 结构变量名 = &#123; ，&#125;；</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1也可以创建结构数组，如下："><a href="#2-1也可以创建结构数组，如下：" class="headerlink" title="2.1也可以创建结构数组，如下："></a>2.1也可以创建结构数组，如下：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">name</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">float</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">name number[<span class="number">2</span>] = &#123;&#123;<span class="string">&quot;APPLE&quot;</span>,<span class="number">20.1</span>&#125;,&#123;<span class="string">&quot;BAD&quot;</span>,<span class="number">21.21</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果你想访问结构中的一个成员，可以如下：</span></span><br><span class="line">number[<span class="number">0</span>].name</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-共用体（union）"><a href="#3-共用体（union）" class="headerlink" title="3.共用体（union）"></a>3.共用体（union）</h2><p>共用体是一种数据格式，它能够存储不同的数据类型，但只能同时存储其中的一种类型，即要在不同时间存储不同类型，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">union</span> <span class="title class_">one</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n_1;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n_2;</span><br><span class="line">    <span class="type">double</span> n_3;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">one numbers;</span><br><span class="line">numbers.n_1 = <span class="number">1</span>;</span><br><span class="line">number.n_2 = <span class="number">2312</span>;</span><br><span class="line">number.n_3 = <span class="number">1.121</span>;</span><br></pre></td></tr></table></figure>
+
+<p>它的作用主要是节省空间。</p>
+<h2 id="4-枚举（enum）"><a href="#4-枚举（enum）" class="headerlink" title="4.枚举（enum）"></a>4.枚举（enum）</h2><p>enum工具提供另一种创建符号常量的公式，还允许代替新类型，但有严格的限制，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">range</span> &#123;red,orange,yellow&#125;;</span><br><span class="line">range band;<span class="comment">//声明枚举变量。</span></span><br><span class="line"><span class="comment">//枚举只定义了赋值运算符，且只能使用定义枚举时使用的枚举量；</span></span><br><span class="line"><span class="comment">//枚举量是整形，可被提升为int，但反之不可；</span></span><br><span class="line"><span class="comment">//可通过强制类型转换，将int值赋给枚举变量：</span></span><br><span class="line">band = <span class="built_in">range</span>(<span class="number">2</span>);<span class="comment">//赋值用的int值不能超过枚举的范围。即如果枚举中含有1和10，则可以取1到10的所有int。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//可手动设置枚举的量，如下：</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">bits</span>&#123;one=<span class="number">1</span>,two=<span class="number">2</span>,four=<span class="number">4</span>,eight=<span class="number">8</span>,number&#125;;<span class="comment">//则number将是9，即为前一项＋1。且可以创建多个相同的值，且必须是整数。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-指针和自由储存空间"><a href="#5-指针和自由储存空间" class="headerlink" title="5.指针和自由储存空间"></a>5.指针和自由储存空间</h2><p>指针是一个变量，它储存的是值的地址。</p>
+<p>访问一个变量的地址时，可以用&amp;，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> home = <span class="number">1</span>;</span><br><span class="line">cout&lt;&lt;&amp;home&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-声明和初始化指针"><a href="#5-1-声明和初始化指针" class="headerlink" title="5.1 声明和初始化指针"></a>5.1 声明和初始化指针</h3><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * pt = <span class="number">5</span>;<span class="comment">//其中pt指针，*pt则是变量，其值为5。实际上，指针前加*即是去指针化。</span></span><br><span class="line">pt = <span class="number">0xB8000000</span>；<span class="comment">//这是不合法的，指针不能与数字相赋值。</span></span><br><span class="line">pt = （<span class="type">int</span>*） <span class="number">0xB8000000</span>；<span class="comment">//这是合法的，即把0xB8000000的地址赋予给指针pt。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-2-使用new和delete来分配内存"><a href="#5-2-使用new和delete来分配内存" class="headerlink" title="5.2 使用new和delete来分配内存"></a>5.2 使用new和delete来分配内存</h3><p>用new初始化指针的句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * pt = <span class="keyword">new</span> <span class="type">int</span>;<span class="comment">//即typename * pointer_name = new typename(与前面的类型相同)。</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">delete</span> pt;<span class="comment">//需要配套使用new和delete来释放内存。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>用new来创建动态数组，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * psome = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">10</span>];<span class="comment">//即句法为typename * pointer_name = new typename[数据个数]。</span></span><br><span class="line"><span class="keyword">delete</span> [] pesome;<span class="comment">//此时需要用delete[]。</span></span><br><span class="line">psome[<span class="number">0</span>] = <span class="number">12</span>;</span><br><span class="line">psome[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">psome[<span class="number">2</span>] = <span class="number">13</span>;</span><br><span class="line">psome = psome + <span class="number">1</span>;<span class="comment">//psome默认为数组的第一个元素，＋1表示往下一个元素。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-指针、数组和指针算术"><a href="#6-指针、数组和指针算术" class="headerlink" title="6. 指针、数组和指针算术"></a>6. 指针、数组和指针算术</h2><p>将整数变量+1后，其<strong>值+1</strong>；对指针+1后，<strong>增加的量等于它指向的类型的字节数</strong>。</p>
+<p>且C++将数组名解释为第一个元素的地址。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> wages[<span class="number">3</span>] = &#123;<span class="number">123</span>,<span class="number">132</span>,<span class="number">122</span>&#125;;</span><br><span class="line"><span class="type">double</span> * pw = wages;<span class="comment">//可将数组名赋值给指针。</span></span><br><span class="line">wages = &amp;wages[<span class="number">0</span>]<span class="comment">//即第一个元素的地址</span></span><br></pre></td></tr></table></figure>
+
+<p>对指针使用<strong>sizeof（）</strong>时，得到的是指针的大小；</p>
+<p>对数组名使用<strong>sizeof（）</strong>时，得到的时整个数组的大小。</p>
+<h3 id="6-1-数组表示法和指针表示法"><a href="#6-1-数组表示法和指针表示法" class="headerlink" title="6.1 数组表示法和指针表示法"></a>6.1 数组表示法和指针表示法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> tacos[<span class="number">10</span>] = &#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="comment">//tacos[0] means *tacos means the value at address tacos，即第一个元素；</span></span><br><span class="line"><span class="comment">//tacos[3] means *(tacos + 3) means the value at tacos +3,即第四个元素。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设ps为已初始化的指针；</span></span><br><span class="line">cout&lt;&lt;ps;<span class="comment">//打印其内容；</span></span><br><span class="line">cout&lt;&lt;(<span class="type">int</span> *)ps;<span class="comment">//打印其地址。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-用new创建动态结构"><a href="#7-用new创建动态结构" class="headerlink" title="7.用new创建动态结构"></a>7.用new创建动态结构</h2><p>句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">inflatable</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">&#125;;</span><br><span class="line">inflatable * p = <span class="keyword">new</span> inflatable；</span><br><span class="line"><span class="comment">//此时用p-&gt;num访问结构成员或者(*p).num。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可使用<strong>auto 名称 &#x3D; 赋值的名称</strong>，来自动辨别类型。</p>
+<h2 id="8-数组替代品"><a href="#8-数组替代品" class="headerlink" title="8.数组替代品"></a>8.数组替代品</h2><h3 id="8-1-模板类vector"><a href="#8-1-模板类vector" class="headerlink" title="8.1 模板类vector"></a>8.1 模板类vector</h3><p>类似于string，是一种动态数组，句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//需包含头文件；</span></span></span><br><span class="line">……</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vi</span><span class="params">(n)</span></span>;<span class="comment">//一般句法为vector&lt;typename&gt; vi(元素个数)，当没有括号时，元素个数为0；</span></span><br><span class="line"><span class="type">int</span> n;<span class="comment">//元素个数可为变量。</span></span><br><span class="line">cin&gt;&gt;n;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2模板类array"><a href="#8-2模板类array" class="headerlink" title="8.2模板类array"></a>8.2模板类array</h3><p>array对象长度固定，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;array&gt;</span></span></span><br><span class="line">……</span><br><span class="line">array&lt;<span class="type">int</span>,5&gt; ai;<span class="comment">//一般句法为array&lt;typename,元素个数且不能为变量&gt; arr ;</span></span><br><span class="line">array&lt;<span class="type">double</span>,4&gt; ad = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">2.1</span>,<span class="number">3</span>&#125;;<span class="comment">//可进行列表初始化。</span></span><br><span class="line"></span><br><span class="line">ad.<span class="built_in">at</span>(<span class="number">2</span>) = <span class="number">2.3</span>;<span class="comment">//使用成员函数at()而不是标准数组法访问元素可避免错误，但遇错会终止运行。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="9-附加"><a href="#9-附加" class="headerlink" title="9.附加"></a>9.附加</h2><h3 id="9-1-char类型"><a href="#9-1-char类型" class="headerlink" title="9.1 char类型"></a>9.1 char类型</h3><p>如果要输入一行，则需使用**cin.getline()<strong>或者</strong>cin.get()**，括号若为空则读取空白；</p>
+<p>如果要添加字符串，则需使用<strong>strcpy</strong>（粘贴变量名，被复制变量名），这是一种覆盖原内容的方式；或是使用<strong>strcat</strong>（粘贴变量名，被复制变量名），这种把被复制内容添加到原内容后面；或是使用<strong>strncpy</strong>（粘贴变量名，被复制变量名，字符个数），这种会自动在末尾添加空格，避免超出内存。</p>
+<h3 id="9-2-string类型"><a href="#9-2-string类型" class="headerlink" title="9.2 string类型"></a>9.2 string类型</h3><p>如果要输入一行，则需使用 getline.(cin,变量名)；</p>
+<p>如果要覆盖字符串内容，可进行赋值运算；</p>
+<p>如果要添加字符串，可使用 + 号。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" data-id="clejwi8xk0004jotxehkw7kby" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第七章 函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.756Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第七章-函数"><a href="#第七章-函数" class="headerlink" title="第七章 函数"></a>第七章 函数</h1><h2 id="7-1-函数基本知识"><a href="#7-1-函数基本知识" class="headerlink" title="7.1 函数基本知识"></a>7.1 函数基本知识</h2><h3 id="7-1-1-提供函数定义"><a href="#7-1-1-提供函数定义" class="headerlink" title="7.1.1 提供函数定义"></a>7.1.1 提供函数定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">typename</span> <span class="title">functionName</span><span class="params">(parameterList)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">statement</span>(s)</span><br><span class="line">	<span class="keyword">return</span> 返回值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7-1-2-提供函数原型"><a href="#7-1-2-提供函数原型" class="headerlink" title="7.1.2 提供函数原型"></a>7.1.2 提供函数原型</h3><p>使用#include访问头文件。</p>
+<h3 id="7-1-3-函数调用"><a href="#7-1-3-函数调用" class="headerlink" title="7.1.3 函数调用"></a>7.1.3 函数调用</h3><p>目前使用int main（）调用函数。</p>
+<h2 id="7-2-函数和数组"><a href="#7-2-函数和数组" class="headerlink" title="7.2 函数和数组"></a>7.2 函数和数组</h2><p>函数头及其部分：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">typename</span> <span class="title">functionName</span><span class="params">(<span class="keyword">typename</span> arrayName, <span class="keyword">typename</span> arraySize)</span></span></span><br></pre></td></tr></table></figure>
+
+<p>数组名指向第一个元素的地址，有如下等式：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr[i] == *(arr + <span class="number">1</span>);</span><br><span class="line">&amp;arr[i] == arr + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-3-指针和const"><a href="#7-3-指针和const" class="headerlink" title="7.3 指针和const"></a>7.3 指针和const</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">39</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> * pt = &amp;age;<span class="comment">//不能用pt指针来修改age的值。</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> sloth = <span class="number">3</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> * ps = &amp;sloth;<span class="comment">//只能防止修改pt指向的值，但不能防止修改pt的值；</span></span><br><span class="line"><span class="type">int</span> * <span class="type">const</span> finger = sloth;<span class="comment">//无法修改指针的值。</span></span><br><span class="line"></span><br><span class="line"><span class="type">double</span> trouble = <span class="number">1.0</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> * <span class="type">const</span> stick = &amp;trouble;<span class="comment">//还可以声明指向const对象的指针。</span></span><br></pre></td></tr></table></figure>
+
+<p>可以将const变量的地址赋给指向const的指针，但不能将const的地址赋给常规指针；</p>
+<p>如果数据类型本身不是指针，则可以将const数据或非const数据的地址赋给指向const的指针，但只能将非const数据的地址赋给非const指针。</p>
+<h2 id="7-4-函数和二维数组"><a href="#7-4-函数和二维数组" class="headerlink" title="7.4 函数和二维数组"></a>7.4 函数和二维数组</h2><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> data[<span class="number">3</span>][<span class="number">4</span>];</span><br><span class="line"><span class="type">int</span> total = <span class="built_in">sum</span>(data,<span class="number">3</span>)<span class="comment">//括号填数组名和行数。</span></span><br><span class="line"><span class="comment">//或</span></span><br><span class="line"><span class="type">int</span> total = <span class="built_in">sum</span>(<span class="type">int</span> data[][<span class="number">4</span>],<span class="number">3</span>);</span><br><span class="line"><span class="comment">//又或</span></span><br><span class="line"><span class="type">int</span> total = <span class="built_in">sum</span>(<span class="built_in">int</span> (*data)[<span class="number">4</span>],<span class="number">3</span>);</span><br><span class="line"><span class="comment">//事实上，有</span></span><br><span class="line">data[<span class="number">3</span>][<span class="number">4</span>] == *(*(data + <span class="number">3</span>) + <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-5-函数和C风格字符串"><a href="#7-5-函数和C风格字符串" class="headerlink" title="7.5 函数和C风格字符串"></a>7.5 函数和C风格字符串</h2><p>字符串作为参数时意味着传递的是地址，可以用const禁止对字符串参数进行修改。</p>
+<p>将字符串作为参数有三种表达方式：</p>
+<p>1.char数组；</p>
+<p>2.用引号括起的字符串常量；</p>
+<p>3.被设置为字符串的地址的char指针。</p>
+<p>函数不能返回字符串，但可以返回字符串的地址，即指针。</p>
+<h2 id="7-6-函数和结构"><a href="#7-6-函数和结构" class="headerlink" title="7.6 函数和结构"></a>7.6 函数和结构</h2><p>可直接将结构作为形参和返回值；</p>
+<p>也可用指向结构地址的指针。</p>
+<h2 id="7-7-函数和string对象"><a href="#7-7-函数和string对象" class="headerlink" title="7.7 函数和string对象"></a>7.7 函数和string对象</h2><p>可直接声明一个string对象数组；</p>
+<p>数组中的每个元素都是一个string对象；</p>
+<p>形参数组名是一个指向string对象的指针，因此数组名[i]是一个string对象。</p>
+<h2 id="7-8-函数和array对象"><a href="#7-8-函数和array对象" class="headerlink" title="7.8 函数和array对象"></a>7.8 函数和array对象</h2><p>若不改变内容，直接传递数值；若需要改变内容，则应传递地址。</p>
+<h2 id="7-9-递归"><a href="#7-9-递归" class="headerlink" title="7.9 递归"></a>7.9 递归</h2><p>递归，即函数可以调用自己。</p>
+<p>递归可以进行无限循环，因此常需要终止语句，通常使用if语句。</p>
+<h2 id="7-10-函数指针"><a href="#7-10-函数指针" class="headerlink" title="7.10 函数指针"></a>7.10 函数指针</h2><h3 id="7-10-1-获取函数地址"><a href="#7-10-1-获取函数地址" class="headerlink" title="7.10.1 获取函数地址"></a>7.10.1 获取函数地址</h3><p>函数的地址是存储其机器语言代码的内存的开始地址。</p>
+<p>获取函数地址只要使用函数名（后面不带小括号和参数）即可，如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">process</span>(think);<span class="comment">//传递的是think（）函数的地址；</span></span><br><span class="line"><span class="built_in">process</span>(<span class="built_in">think</span>());<span class="comment">//传递的是think（）函数的返回值，即先调用think函数，再传递其返回值。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-10-2-声明函数指针"><a href="#7-10-2-声明函数指针" class="headerlink" title="7.10.2 声明函数指针"></a>7.10.2 声明函数指针</h3><p>声明需要指定返回值类型和函数的参数列表，如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> （*f) (<span class="type">int</span> n);</span><br></pre></td></tr></table></figure>
+
+<p>此时，（*f）是函数，f是指向函数的指针。</p>
+<p>可以把相应的函数地址赋给指针，但前提是返回值和参数列表的类型必须一致。</p>
+<h3 id="7-10-3-使用指针来调用函数"><a href="#7-10-3-使用指针来调用函数" class="headerlink" title="7.10.3 使用指针来调用函数"></a>7.10.3 使用指针来调用函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//（*f）扮演的角色和函数名相同，因此只需使用（*f）即可</span></span><br></pre></td></tr></table></figure>
+
+<p>可创建一个函数指针的数组，如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> * (*pa[<span class="number">3</span>]) (<span class="type">const</span> <span class="type">double</span> *, <span class="type">int</span>) = &#123;f1,f2,f3&#125;;<span class="comment">//假设f1,f2,f3是函数。</span></span><br></pre></td></tr></table></figure>
+
+<p>也可创建指向整个数组的指针。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/" data-id="clejwi8xe0000jotx5iyl8gpr" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第六章 分支语句和逻辑运算符" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.755Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第六章-分支语句和逻辑运算符"><a href="#第六章-分支语句和逻辑运算符" class="headerlink" title="第六章 分支语句和逻辑运算符"></a>第六章 分支语句和逻辑运算符</h1><h2 id="6-1-if-语句"><a href="#6-1-if-语句" class="headerlink" title="6.1 if 语句"></a>6.1 if 语句</h2><p>如果测试条件为true，则执行语句或语块（需用大括号）；否则不执行。</p>
+<p>其语法与while类似，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (test-condition)</span><br><span class="line">	statement</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-1-1-if-else语句"><a href="#6-1-1-if-else语句" class="headerlink" title="6.1.1 if else语句"></a>6.1.1 if else语句</h3><p>if else语句用于决定两条语句中执行哪一条，其语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (test-condition)</span><br><span class="line">	statement1</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	statement2</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-1-2-if-else语句的格式化"><a href="#6-1-2-if-else语句的格式化" class="headerlink" title="6.1.2 if else语句的格式化"></a>6.1.2 if else语句的格式化</h3><p>需注意，if else的分号中有如下要求：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当没有语句块</span></span><br><span class="line"><span class="keyword">if</span> (ch == <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">	cout&lt;&lt;ch;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	cout&lt;&lt;++ch;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//当有语句块</span></span><br><span class="line"><span class="keyword">if</span> (ch == <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line">	zorro++</span><br><span class="line">	cout&lt;&lt;zorro;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	dull++</span><br><span class="line">	cout&lt;&lt;dull;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-1-3-if-else-if-else结构"><a href="#6-1-3-if-else-if-else结构" class="headerlink" title="6.1.3 if else if else结构"></a>6.1.3 if else if else结构</h3><p>实质为两个if else语句的嵌套，其语法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> （ch == <span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">	a_grade++;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (ch == <span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">	b_grade++;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	soso++;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-2-逻辑表达式"><a href="#6-2-逻辑表达式" class="headerlink" title="6.2 逻辑表达式"></a>6.2 逻辑表达式</h2><p><strong>||<strong>表示</strong>或</strong>；**&amp;&amp;<strong>表示</strong>且<strong>；</strong>！<strong>（前置）表示</strong>非**。</p>
+<p><strong>||<strong>和</strong>&amp;&amp;<strong>的优先级都</strong>低于关系运算符</strong>，但**&amp;&amp;<strong>的优先级</strong>高于||**；</p>
+<p><strong>！</strong>的优先级<strong>高于所有算术和关系运算符</strong>。</p>
+<p><strong>||<strong>还可写成</strong>and</strong>；**&amp;&amp;<strong>还可写成</strong>or<strong>；</strong>！<strong>还可写成</strong>not**。</p>
+<h2 id="6-3-字符函数库-cctype"><a href="#6-3-字符函数库-cctype" class="headerlink" title="6.3 字符函数库 cctype"></a>6.3 字符函数库 cctype</h2><p>使用ctype头文件，用于判断字符。如isalpha（），若括号内的是字母，则返回1，否则为0。</p>
+<p>同理的，有如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isalnum</span>()<span class="comment">//字母或数字；</span></span><br><span class="line"><span class="built_in">isdigit</span>()<span class="comment">//0-9的数字；</span></span><br><span class="line"><span class="built_in">isgraph</span>()<span class="comment">//除空格外的打印字符；</span></span><br><span class="line"><span class="built_in">islower</span>()<span class="comment">//小写字母；</span></span><br><span class="line"><span class="built_in">isprint</span>()<span class="comment">//所有打印字符；</span></span><br><span class="line"><span class="built_in">ispunct</span>()<span class="comment">//标点符号；</span></span><br><span class="line"><span class="built_in">isspace</span>()<span class="comment">//标准空白字符，如空格、换行符等；</span></span><br><span class="line"><span class="built_in">tolower</span>()<span class="comment">//转换为小写字母；</span></span><br><span class="line"><span class="built_in">toupper</span>()<span class="comment">//转换为大写字母。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-4-？：运算符"><a href="#6-4-？：运算符" class="headerlink" title="6.4 ？：运算符"></a>6.4 ？：运算符</h2><p>常被用来替代if else运算符，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expression1 ? expression2 : expression3；</span><br></pre></td></tr></table></figure>
+
+<p>如果expression1为true，结果为expression2的值；否则为expression3的值。</p>
+<h2 id="6-5-switch语句"><a href="#6-5-switch语句" class="headerlink" title="6.5 switch语句"></a>6.5 switch语句</h2><p>用于从大型列表中进行选择，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (integer-expression)<span class="comment">//参数必须为整数表达式或者单个字符；</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">case</span> label1 : <span class="built_in">statement</span>(s)<span class="comment">//label必须为整数表达式或者单个字符，且必须为常量；</span></span><br><span class="line">	<span class="keyword">case</span> label2 : <span class="built_in">statement</span>(s)<span class="comment">//且statement中需要有break，否则会一直往下执行switch的语句，而不会跳到swtich之后的语句；</span></span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">default</span> : <span class="built_in">statement</span>(s)<span class="comment">//当参数没有匹配的label，跳到该行；若无该行，则执行switch之后的语句。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>注意，label还可以为枚举型，switch会将枚举提升为int类型，但参数不能为枚举型。</p>
+<p>switch与if else的区别在于前者的标签只能判断单个数值，而后者可以判断取值范围。</p>
+<h2 id="6-6-break-和-continue语句"><a href="#6-6-break-和-continue语句" class="headerlink" title="6.6 break 和 continue语句"></a>6.6 break 和 continue语句</h2><p>break可用于swtich和任何循环语句中，其功能为跳到switch或循环后面的语句处执行；</p>
+<p>continue可用于循环中，其功能为跳过循环体中余下的代码，并开始新一轮的循环（在for中会从更新表达式往下开始，在while中会跳过更新表达式）。</p>
+<h2 id="6-7-读取数字的循环"><a href="#6-7-读取数字的循环" class="headerlink" title="6.7 读取数字的循环"></a>6.7 读取数字的循环</h2><p>使用cin.clear()重置错误输入，再用cin.get()删除错误输入，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!(cin &gt;&gt; golf[i]))</span><br><span class="line">&#123;</span><br><span class="line">	cin.<span class="built_in">clear</span>();</span><br><span class="line">	<span class="keyword">while</span> (cin.<span class="built_in">get</span>() != <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Please enter a number: &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-8-简单文件输入-x2F-输出"><a href="#6-8-简单文件输入-x2F-输出" class="headerlink" title="6.8 简单文件输入&#x2F;输出"></a>6.8 简单文件输入&#x2F;输出</h2><h3 id="6-8-1文本输出"><a href="#6-8-1文本输出" class="headerlink" title="6.8.1文本输出"></a>6.8.1文本输出</h3><p>1.包含头文件fstream；</p>
+<p>2.创建一个ofstream对象；</p>
+<p>3.将该ofstream对象与一个文件关联起来；</p>
+<p>4.就像使用cout那样使用该ofstream对象；可类似使用cout&lt;&lt;fixed，即用普通方式输出、非科学计数法；和cout.precision(n),保留n位小数；和cout.setf()来改变输出格式等。变化只是把cout变为对象名如outfile。</p>
+<p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ofstream outfile;</span><br><span class="line">outfile.<span class="built_in">open</span>(<span class="string">&quot;fish.txt&quot;</span>);</span><br><span class="line"><span class="type">double</span> wt = <span class="number">12.2</span>;</span><br><span class="line">outfile&lt;&lt;wt;</span><br><span class="line">outfile.<span class="built_in">close</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-8-2-文本输入"><a href="#6-8-2-文本输入" class="headerlink" title="6.8.2 文本输入"></a>6.8.2 文本输入</h3><p>1.包含头文件fstream；</p>
+<p>2.创建一个ifstream对象；</p>
+<p>3.将该ifstream对象与一个文件关联起来；</p>
+<p>4.就像使用cin那样使用该ifstream对象，可结合使用getline（）、eof（）和fail（）等。</p>
+<p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ifstream infile;</span><br><span class="line">infile.<span class="built_in">open</span>(<span class="string">&quot;fish.txt&quot;</span>);</span><br><span class="line"><span class="type">double</span> wt;</span><br><span class="line">infile&gt;&gt;wt;</span><br></pre></td></tr></table></figure>
+
+<p>有如下方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">infile.<span class="built_in">is_open</span>()<span class="comment">//文件成功打开将放回true；</span></span><br><span class="line"><span class="comment">//因此，有如下程序：</span></span><br><span class="line"><span class="keyword">if</span> (!infile.<span class="built_in">is_open</span>())</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">exit</span>(EXIT_FAILURE);<span class="comment">//exit（）函数在头文件cstdlib中，使用EXIT_FAILURE参数，将在文件无法打开时终止程序。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也有如下方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">infile.<span class="built_in">good</span>()<span class="comment">//当程序能成功读入文件，返回true；</span></span><br><span class="line">infile.<span class="built_in">eof</span>()<span class="comment">//如果读取到EOF，将返回true；</span></span><br><span class="line">infile.<span class="built_in">fail</span>()<span class="comment">//如果读取的类型不匹配，返回true；</span></span><br><span class="line">infile.<span class="built_in">bad</span>()<span class="comment">//如果出现意外问题，返回true。</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="clejwi8xk0003jotxalje42vq" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第八章 函数探幽" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.754Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第八章-函数探幽"><a href="#第八章-函数探幽" class="headerlink" title="第八章 函数探幽"></a>第八章 函数探幽</h1><h2 id="8-1-内联函数"><a href="#8-1-内联函数" class="headerlink" title="8.1 内联函数"></a>8.1 内联函数</h2><p>使用内联函数的特性，需要在函数声明和定义前加上关键字inline；</p>
+<p>通常省略原型，在原型处直接定义函数，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">double</span> <span class="title">square</span><span class="params">(<span class="type">double</span> x)</span> </span>&#123;<span class="keyword">return</span> x * x&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>注意，内联函数不能递归。</p>
+<h2 id="8-2-引用变量"><a href="#8-2-引用变量" class="headerlink" title="8.2 引用变量"></a>8.2 引用变量</h2><h3 id="8-2-1-创建引用变量"><a href="#8-2-1-创建引用变量" class="headerlink" title="8.2.1 创建引用变量"></a>8.2.1 创建引用变量</h3><p>用&amp;来声明引用，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> rat = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> &amp; n = rat;</span><br></pre></td></tr></table></figure>
+
+<p>注意，引用变量必须在声明时进行初始化，而不能先声明再赋值；</p>
+<p>引用变量类似于const，只能进行初始化声明来赋值，即便用赋值来设置，也不会改变引用的对象。</p>
+<h3 id="8-2-2-将引用作为函数参数"><a href="#8-2-2-将引用作为函数参数" class="headerlink" title="8.2.2 将引用作为函数参数"></a>8.2.2 将引用作为函数参数</h3><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp; a)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果又想使用引用变量又不想改变变量的值，在引用前面加上const。</p>
+<h3 id="8-2-3-ostream参数"><a href="#8-2-3-ostream参数" class="headerlink" title="8.2.3 ostream参数"></a>8.2.3 ostream参数</h3><p>setf()能够设置各种格式化状态，如setf(ios_base::fixed)将对象置于使用定点表示法的模式（保留小数位），并可使用precision（）设置显示多少位小数；</p>
+<p>而setf(ios_base::showpoint)将对象置于显示小数点的模式，即小数部分为0；</p>
+<p>以上这些设置将一直保持不变，可使用ios_base::fmtflags 类型名来存储设置信息，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ios_base::fmtflags initial;</span><br><span class="line">initial = cin.<span class="built_in">setf</span>(ios_base::fixed);</span><br><span class="line">cin.<span class="built_in">setf</span>(initial);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-3-默认参数"><a href="#8-3-默认参数" class="headerlink" title="8.3 默认参数"></a>8.3 默认参数</h2><p>默认参数是当函数调用中省略了实参时自动使用的一个值；</p>
+<p>它必须通过函数原型进行设置，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">harpo</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m = <span class="number">4</span>, <span class="type">int</span> n = <span class="number">1</span>)</span></span>;<span class="comment">//如果要为某个实参赋值，则其右边的也必须设置为默认参数。</span></span><br><span class="line"><span class="built_in">harpo</span>(<span class="number">1</span>,<span class="number">2</span>);<span class="comment">//调用函数时必须从左到右依次赋予给相应的形参，也就是说不能跳过参数，如haopo（1，，2）是不被允许的。</span></span><br></pre></td></tr></table></figure>
+
+<p>函数定义与没有默认参数时完全相同。</p>
+<h2 id="8-4-函数重载"><a href="#8-4-函数重载" class="headerlink" title="8.4 函数重载"></a>8.4 函数重载</h2><p>函数重载的关键是函数的<strong>参数列表</strong>（即特征标）必须不同，至于函数类型（即函数返回值的类型则无关紧要);</p>
+<p>函数的特征标要素是参数<strong>数目</strong>、<strong>类型</strong>和<strong>排列顺序</strong>；</p>
+<p>函数重载时，严格要求区分<strong>const</strong>和<strong>非const</strong>的参数，并且类型必须一致；</p>
+<p>需注意，函数把<strong>类型引用</strong>和类型本身是为<strong>同一个特征标</strong>。</p>
+<h2 id="8-5-函数模板"><a href="#8-5-函数模板" class="headerlink" title="8.5 函数模板"></a>8.5 函数模板</h2><h3 id="8-5-1-创建模板"><a href="#8-5-1-创建模板" class="headerlink" title="8.5.1 创建模板"></a>8.5.1 创建模板</h3><p>函数模板，即用泛型来定义函数，其中的泛型可用具体类型来体会，即不是所有参数类型都必须是泛型，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Anytype&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(Anytype &amp;a, Anytype &amp;b, <span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第一行指出建立一个函数模板，并将其类型命名为Anytype（可替换为其他名字），而关键字template和typename（可替换为class）则为必需，且必须使用尖括号。</p>
+<h3 id="8-5-2-重载的模板"><a href="#8-5-2-重载的模板" class="headerlink" title="8.5.2 重载的模板"></a>8.5.2 重载的模板</h3><p>函数模板可以重载。前提是函数特征标必须不同，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(T &amp;a, T &amp;b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">voif <span class="title">swap</span><span class="params">(T *a, T *b, <span class="type">int</span> n)</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-5-3-模板的局限性"><a href="#8-5-3-模板的局限性" class="headerlink" title="8.5.3 模板的局限性"></a>8.5.3 模板的局限性</h3><p>某些类型可能无法执行函数中的某些代码，如如果参数类型为char，则无法执行函数中的+号运算。</p>
+<h3 id="8-5-4-显示具体化"><a href="#8-5-4-显示具体化" class="headerlink" title="8.5.4 显示具体化"></a>8.5.4 显示具体化</h3><p>为了弥补模板的局限性，可以提供一个具体化函数定义，即显式具体化；</p>
+<p>在执行函数时，编译器有以下规则：</p>
+<p>1.对于给定的函数名，可以有非模板函数、模板函数和显式具体化模板函数以及它们的重载版本；</p>
+<p>2.显式具体化的原型和定义以template&lt;&gt;打头，并通过名称来指出类型；</p>
+<p>3.具体化优先于常规模板，非模板函数优先于具体化和常规模板。</p>
+<p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(T &amp;a, T &amp;b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;&gt;<span class="type">void</span> <span class="built_in">swap</span>&lt;job&gt;(job &amp;a, job &amp;b);<span class="comment">//也可写成template&lt;&gt;void swap(job &amp;a, job &amp;b);</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-5-5-实例化"><a href="#8-5-5-实例化" class="headerlink" title="8.5.5 实例化"></a>8.5.5 实例化</h3><p>代码中包含函数模板本身并不会生成函数定义，只是一个用于生成函数定义的方案；</p>
+<p>编译器使用模板为特定类型生成函数定义时，得到的是<strong>模板实例</strong>，这种被称为<strong>隐式实例化</strong>；</p>
+<p>也可进行显示实例化，需在前面加上template（没有尖括号）如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> <span class="type">void</span> <span class="built_in">swap</span>&lt;<span class="type">char</span>&gt;(<span class="type">char</span> &amp;,<span class="type">char</span> &amp;);<span class="comment">//意为使用swap（）模板生成char &amp;类型的函数定义；而显式具体化意为不要使用swap（）模板来生成函数定义，而使用专门为特定类型显示地定义的函数定义。</span></span><br></pre></td></tr></table></figure>
+
+<p>可以进行强制类型转换，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> m = <span class="number">6</span>;</span><br><span class="line"><span class="type">double</span> x = <span class="number">1.2</span>;</span><br><span class="line"><span class="built_in">swap</span>&lt;<span class="type">double</span>&gt;(m, x);<span class="comment">//即在函数名后用尖括号括起强制转换类型。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-5-6-decltype"><a href="#8-5-6-decltype" class="headerlink" title="8.5.6 decltype()"></a>8.5.6 decltype()</h3><p>给<strong>decltype</strong>提供的参数可以是表达式，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">decltype</span>(x + y) xpy = x + y;<span class="comment">//意为xpy的类型是x+y的类型。</span></span><br></pre></td></tr></table></figure>
+
+<p>如需要多次使用<strong>decltype</strong>，可结合使用<strong>typedef</strong>，即定义别名，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">decltype</span><span class="params">(x + y)</span> xytype</span>;</span><br><span class="line">xytype xpy = x + y;</span><br><span class="line">xytypr arr[<span class="number">10</span>;]</span><br></pre></td></tr></table></figure>
+
+<p>但将此运用于确定函数类型时则可能不行，因为函数的返回值类型可能是不确定的；</p>
+<p>可以使用占位符<strong>auto</strong>，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T1</span>, <span class="keyword">class</span> <span class="title class_">T2</span>&gt;</span><br><span class="line"><span class="function"><span class="keyword">auto</span> <span class="title">gt</span><span class="params">(T1 x, T2 y)</span> -&gt; <span class="title">decltype</span><span class="params">(x + y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/" data-id="clejwi8xj0002jotx0bju8oe1" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-第五章 循环和关系表达式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.752Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第五章-循环和关系表达式"><a href="#第五章-循环和关系表达式" class="headerlink" title="第五章 循环和关系表达式"></a>第五章 循环和关系表达式</h1><h2 id="5-1-for-循环"><a href="#5-1-for-循环" class="headerlink" title="5.1 for 循环"></a>5.1 for 循环</h2><h3 id="5-1-1-for循环包含控制部分和循环体。"><a href="#5-1-1-for循环包含控制部分和循环体。" class="headerlink" title="5.1.1 for循环包含控制部分和循环体。"></a><strong>5.1.1</strong> for循环包含<strong>控制部分</strong>和<strong>循环体</strong>。</h3><p>控制部分如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (初始化；测试；更新操作)</span><br></pre></td></tr></table></figure>
+
+<p>有如下例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)<span class="comment">//也可写成（int i = 0; i &lt; 5; i++），即在括号中进行声明初始化，但此时i只在循环中存在。</span></span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;C++ knows loops.&quot;</span>&lt;&lt;endl;<span class="comment">//将该句子打印五次。</span></span><br><span class="line">cout &lt;&lt;<span class="string">&quot;C++ knows when to stop.&quot;</span>&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-2-在for的测试中，用bool类型判断循环是否继续。"><a href="#5-1-2-在for的测试中，用bool类型判断循环是否继续。" class="headerlink" title="5.1.2 在for的测试中，用bool类型判断循环是否继续。"></a><strong>5.1.2</strong> 在for的测试中，用<strong>bool类型</strong>判断循环是否继续。</h3><p>在用cout打印不等式时，默认输出int值（即0或1），可用**cout.setf(ios_::boolalpha)**来打印true或false。</p>
+<h3 id="5-1-3-对于上述提到的递增、递减运算符，有如下性质（已递增为例）："><a href="#5-1-3-对于上述提到的递增、递减运算符，有如下性质（已递增为例）：" class="headerlink" title="5.1.3 对于上述提到的递增、递减运算符，有如下性质（已递增为例）："></a><strong>5.1.3</strong> 对于上述提到的<strong>递增、递减运算符</strong>，有如下性质（已递增为例）：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> b = a++;<span class="comment">//此时a为2，b为1。</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> c = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> d = ++c;<span class="comment">//此时c和d都为2。</span></span><br><span class="line"><span class="comment">//即当加号在后面，是计算完表达式再加1；当加号在前面，是先加1再计算表达式。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-4-组合赋值运算符合并了计算和赋值，如下："><a href="#5-1-4-组合赋值运算符合并了计算和赋值，如下：" class="headerlink" title="5.1.4 组合赋值运算符合并了计算和赋值，如下："></a><strong>5.1.4</strong> <strong>组合赋值运算</strong>符合并了计算和赋值，如下：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>；</span><br><span class="line">a += <span class="number">1</span>；<span class="comment">//意为把a＋1即2赋值给a。</span></span><br></pre></td></tr></table></figure>
+
+<p>它的左边操作数必须是可以赋值的，如变量，数组元素，指针解除引用标识或结构成员。</p>
+<p>类似的还有-&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;。</p>
+<h3 id="5-1-5-可用-构建循环的复合语句。"><a href="#5-1-5-可用-构建循环的复合语句。" class="headerlink" title="5.1.5 可用{}构建循环的复合语句。"></a><strong>5.1.5</strong> 可用{}构建循环的复合语句。</h3><h3 id="5-1-6-基于范围的for循环"><a href="#5-1-6-基于范围的for循环" class="headerlink" title="5.1.6 基于范围的for循环"></a>5.1.6 基于范围的for循环</h3><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> prices[<span class="number">5</span>] = &#123;<span class="number">4.99</span>, <span class="number">10.99</span>, <span class="number">23.1</span>, <span class="number">22.2</span>, <span class="number">321.32</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">double</span> x : prices)</span><br><span class="line">	cout&lt;&lt; x &lt;&lt; endl;<span class="comment">//该程序将依次打印prices数组里的数。</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span> (<span class="type">double</span> &amp;x : prices)</span><br><span class="line">	x = x * <span class="number">0.8</span>;<span class="comment">//该程序允许修改x的值，但上面那种程序不行，因为这里有引用变量 &amp;x。</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> x : &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>&#125;)</span><br><span class="line"> cout&lt;&lt; x &lt;&lt; <span class="string">&quot; &quot;</span>;<span class="comment">//结合for循环和初始化列表。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-6-可用逗号来复合表达式。"><a href="#5-1-6-可用逗号来复合表达式。" class="headerlink" title="5.1.6 可用逗号来复合表达式。"></a><strong>5.1.6</strong> 可用逗号来复合表达式。</h3><p>逗号表达式的值是<strong>第二部分</strong>的值，如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i,j;</span><br><span class="line">i = <span class="number">20</span>, j = <span class="number">2</span> * i;<span class="comment">//此条表达式的值是40</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-7-strcmp（）函数"><a href="#5-1-7-strcmp（）函数" class="headerlink" title="5.1.7  strcmp（）函数"></a>5.1.7  strcmp（）函数</h3><p>可用<strong>strcmp</strong>（字符串1（可为数组名），字符串2）来比较字符串是否相等。（只可用于<strong>char类型</strong>）</p>
+<p>如果字符串1按字母顺序在第二个字符串前面，则返回一个负数值，如果相等则为0，如果在后面则为正数值。注意，大写字母在小写字母前面。</p>
+<h3 id="5-1-8-比较string类字符串"><a href="#5-1-8-比较string类字符串" class="headerlink" title="5.1.8 比较string类字符串"></a>5.1.8 比较string类字符串</h3><p>可直接用<strong>关系运算符</strong>进行比较，只要有<strong>至少一个</strong>为<strong>string</strong>类型。</p>
+<h2 id="5-2-while循环"><a href="#5-2-while循环" class="headerlink" title="5.2 while循环"></a>5.2 while循环</h2><h3 id="5-2-1-while循环是没有初始化和更新部分的for循环，它只有测试条件，"><a href="#5-2-1-while循环是没有初始化和更新部分的for循环，它只有测试条件，" class="headerlink" title="5.2.1 while循环是没有初始化和更新部分的for循环，它只有测试条件，"></a>5.2.1 while循环是没有初始化和更新部分的for循环，它只有测试条件，</h3><p>即 while （test—condition）</p>
+<p>​				body</p>
+<h3 id="5-2-2-用clock（）和头文件ctime创建延迟循环"><a href="#5-2-2-用clock（）和头文件ctime创建延迟循环" class="headerlink" title="5.2.2 用clock（）和头文件ctime创建延迟循环"></a>5.2.2 用clock（）和头文件ctime创建延迟循环</h3><p>CLOCK_PER_SEC为符号常量，clock_t为clock（）的别名。</p>
+<h3 id="5-2-3-创建别名"><a href="#5-2-3-创建别名" class="headerlink" title="5.2.3 创建别名"></a>5.2.3 创建别名</h3><p>可用#define，如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> BYTE char<span class="comment">//将所有BYTE替换为char类型。</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>也可用typedef，如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> BYTE<span class="comment">//通用格式为typedef typename aliasName。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-3-do-while循环"><a href="#5-3-do-while循环" class="headerlink" title="5.3 do while循环"></a>5.3 do while循环</h2><h3 id="5-3-1-基本内容"><a href="#5-3-1-基本内容" class="headerlink" title="5.3.1 基本内容"></a>5.3.1 基本内容</h3><p>do while不同于for和while循环，它先执行循环体，再判定测试表达式，决定是否继续循环。</p>
+<p>其通用格式如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">	body</span><br><span class="line"><span class="keyword">while</span> （test—expression）；</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-4-二维数组和嵌套循环"><a href="#5-4-二维数组和嵌套循环" class="headerlink" title="5.4 二维数组和嵌套循环"></a>5.4 二维数组和嵌套循环</h2><h3 id="5-4-1-二维数组"><a href="#5-4-1-二维数组" class="headerlink" title="5.4.1 二维数组"></a>5.4.1 二维数组</h3><p>创建如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> maxtemps [<span class="number">4</span>][<span class="number">5</span>];<span class="comment">//可把第一个看成行，第二个看成列。</span></span><br></pre></td></tr></table></figure>
+
+<p>且可以列表初始化，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> numbers [<span class="number">2</span>][<span class="number">2</span>] = </span><br><span class="line">&#123;</span><br><span class="line">	&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,<span class="comment">//第一行。</span></span><br><span class="line">	&#123;<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//第二行。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="clejwi8xi0001jotxdl1icqyx" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/02/25/hello-world/" class="article-date">
@@ -153,7 +608,23 @@
       <ul>
         
           <li>
-            <a href="/2023/02/25/hello-world/">Hello World</a>
+            <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/">(no title)</a>
           </li>
         
       </ul>

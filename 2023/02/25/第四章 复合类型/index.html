@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第四章 复合类型1.数组数组能储存同一类型的多个数据，其声明如下： 12typename name[数据个数] &#x3D; &amp;#123;&amp;#125;；typename可以是int、double、char、string等    2.结构结构可以储存不同类型的多个数据，其声明如下： 1234567struct name&amp;#123;	typename name；	typeneme name_1；&amp;#125;；n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第四章 复合类型1.数组数组能储存同一类型的多个数据，其声明如下： 12typename name[数据个数] &#x3D; &amp;#123;&amp;#125;；typename可以是int、double、char、string等    2.结构结构可以储存不同类型的多个数据，其声明如下： 1234567struct name&amp;#123;	typename name；	typeneme name_1；&amp;#125;；n">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-25T11:50:05.757Z">
+<meta property="article:modified_time" content="2023-01-28T11:29:51.043Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第四章 复合类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.757Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第四章-复合类型"><a href="#第四章-复合类型" class="headerlink" title="第四章 复合类型"></a>第四章 复合类型</h1><h2 id="1-数组"><a href="#1-数组" class="headerlink" title="1.数组"></a>1.数组</h2><p>数组能储存同一类型的多个数据，其声明如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typename</span> name[数据个数] = &#123;&#125;；</span><br><span class="line"><span class="keyword">typename</span>可以是<span class="type">int</span>、<span class="type">double</span>、<span class="type">char</span>、string等</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-结构"><a href="#2-结构" class="headerlink" title="2.结构"></a>2.结构</h2><p>结构可以储存不同类型的多个数据，其声明如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">name</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">typename</span> name；</span><br><span class="line">	typeneme name_1；</span><br><span class="line">&#125;；</span><br><span class="line"></span><br><span class="line">name 结构变量名 = &#123; ，&#125;；</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1也可以创建结构数组，如下："><a href="#2-1也可以创建结构数组，如下：" class="headerlink" title="2.1也可以创建结构数组，如下："></a>2.1也可以创建结构数组，如下：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">name</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">float</span> n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">name number[<span class="number">2</span>] = &#123;&#123;<span class="string">&quot;APPLE&quot;</span>,<span class="number">20.1</span>&#125;,&#123;<span class="string">&quot;BAD&quot;</span>,<span class="number">21.21</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果你想访问结构中的一个成员，可以如下：</span></span><br><span class="line">number[<span class="number">0</span>].name</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-共用体（union）"><a href="#3-共用体（union）" class="headerlink" title="3.共用体（union）"></a>3.共用体（union）</h2><p>共用体是一种数据格式，它能够存储不同的数据类型，但只能同时存储其中的一种类型，即要在不同时间存储不同类型，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">union</span> <span class="title class_">one</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n_1;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> n_2;</span><br><span class="line">    <span class="type">double</span> n_3;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">one numbers;</span><br><span class="line">numbers.n_1 = <span class="number">1</span>;</span><br><span class="line">number.n_2 = <span class="number">2312</span>;</span><br><span class="line">number.n_3 = <span class="number">1.121</span>;</span><br></pre></td></tr></table></figure>
+
+<p>它的作用主要是节省空间。</p>
+<h2 id="4-枚举（enum）"><a href="#4-枚举（enum）" class="headerlink" title="4.枚举（enum）"></a>4.枚举（enum）</h2><p>enum工具提供另一种创建符号常量的公式，还允许代替新类型，但有严格的限制，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">range</span> &#123;red,orange,yellow&#125;;</span><br><span class="line">range band;<span class="comment">//声明枚举变量。</span></span><br><span class="line"><span class="comment">//枚举只定义了赋值运算符，且只能使用定义枚举时使用的枚举量；</span></span><br><span class="line"><span class="comment">//枚举量是整形，可被提升为int，但反之不可；</span></span><br><span class="line"><span class="comment">//可通过强制类型转换，将int值赋给枚举变量：</span></span><br><span class="line">band = <span class="built_in">range</span>(<span class="number">2</span>);<span class="comment">//赋值用的int值不能超过枚举的范围。即如果枚举中含有1和10，则可以取1到10的所有int。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//可手动设置枚举的量，如下：</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">bits</span>&#123;one=<span class="number">1</span>,two=<span class="number">2</span>,four=<span class="number">4</span>,eight=<span class="number">8</span>,number&#125;;<span class="comment">//则number将是9，即为前一项＋1。且可以创建多个相同的值，且必须是整数。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-指针和自由储存空间"><a href="#5-指针和自由储存空间" class="headerlink" title="5.指针和自由储存空间"></a>5.指针和自由储存空间</h2><p>指针是一个变量，它储存的是值的地址。</p>
+<p>访问一个变量的地址时，可以用&amp;，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> home = <span class="number">1</span>;</span><br><span class="line">cout&lt;&lt;&amp;home&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-声明和初始化指针"><a href="#5-1-声明和初始化指针" class="headerlink" title="5.1 声明和初始化指针"></a>5.1 声明和初始化指针</h3><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * pt = <span class="number">5</span>;<span class="comment">//其中pt指针，*pt则是变量，其值为5。实际上，指针前加*即是去指针化。</span></span><br><span class="line">pt = <span class="number">0xB8000000</span>；<span class="comment">//这是不合法的，指针不能与数字相赋值。</span></span><br><span class="line">pt = （<span class="type">int</span>*） <span class="number">0xB8000000</span>；<span class="comment">//这是合法的，即把0xB8000000的地址赋予给指针pt。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-2-使用new和delete来分配内存"><a href="#5-2-使用new和delete来分配内存" class="headerlink" title="5.2 使用new和delete来分配内存"></a>5.2 使用new和delete来分配内存</h3><p>用new初始化指针的句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * pt = <span class="keyword">new</span> <span class="type">int</span>;<span class="comment">//即typename * pointer_name = new typename(与前面的类型相同)。</span></span><br><span class="line">……</span><br><span class="line"><span class="keyword">delete</span> pt;<span class="comment">//需要配套使用new和delete来释放内存。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>用new来创建动态数组，如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> * psome = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">10</span>];<span class="comment">//即句法为typename * pointer_name = new typename[数据个数]。</span></span><br><span class="line"><span class="keyword">delete</span> [] pesome;<span class="comment">//此时需要用delete[]。</span></span><br><span class="line">psome[<span class="number">0</span>] = <span class="number">12</span>;</span><br><span class="line">psome[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">psome[<span class="number">2</span>] = <span class="number">13</span>;</span><br><span class="line">psome = psome + <span class="number">1</span>;<span class="comment">//psome默认为数组的第一个元素，＋1表示往下一个元素。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-指针、数组和指针算术"><a href="#6-指针、数组和指针算术" class="headerlink" title="6. 指针、数组和指针算术"></a>6. 指针、数组和指针算术</h2><p>将整数变量+1后，其<strong>值+1</strong>；对指针+1后，<strong>增加的量等于它指向的类型的字节数</strong>。</p>
+<p>且C++将数组名解释为第一个元素的地址。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> wages[<span class="number">3</span>] = &#123;<span class="number">123</span>,<span class="number">132</span>,<span class="number">122</span>&#125;;</span><br><span class="line"><span class="type">double</span> * pw = wages;<span class="comment">//可将数组名赋值给指针。</span></span><br><span class="line">wages = &amp;wages[<span class="number">0</span>]<span class="comment">//即第一个元素的地址</span></span><br></pre></td></tr></table></figure>
+
+<p>对指针使用<strong>sizeof（）</strong>时，得到的是指针的大小；</p>
+<p>对数组名使用<strong>sizeof（）</strong>时，得到的时整个数组的大小。</p>
+<h3 id="6-1-数组表示法和指针表示法"><a href="#6-1-数组表示法和指针表示法" class="headerlink" title="6.1 数组表示法和指针表示法"></a>6.1 数组表示法和指针表示法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> tacos[<span class="number">10</span>] = &#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line"><span class="comment">//tacos[0] means *tacos means the value at address tacos，即第一个元素；</span></span><br><span class="line"><span class="comment">//tacos[3] means *(tacos + 3) means the value at tacos +3,即第四个元素。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设ps为已初始化的指针；</span></span><br><span class="line">cout&lt;&lt;ps;<span class="comment">//打印其内容；</span></span><br><span class="line">cout&lt;&lt;(<span class="type">int</span> *)ps;<span class="comment">//打印其地址。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-用new创建动态结构"><a href="#7-用new创建动态结构" class="headerlink" title="7.用new创建动态结构"></a>7.用new创建动态结构</h2><p>句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">inflatable</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">&#125;;</span><br><span class="line">inflatable * p = <span class="keyword">new</span> inflatable；</span><br><span class="line"><span class="comment">//此时用p-&gt;num访问结构成员或者(*p).num。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可使用<strong>auto 名称 &#x3D; 赋值的名称</strong>，来自动辨别类型。</p>
+<h2 id="8-数组替代品"><a href="#8-数组替代品" class="headerlink" title="8.数组替代品"></a>8.数组替代品</h2><h3 id="8-1-模板类vector"><a href="#8-1-模板类vector" class="headerlink" title="8.1 模板类vector"></a>8.1 模板类vector</h3><p>类似于string，是一种动态数组，句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span><span class="comment">//需包含头文件；</span></span></span><br><span class="line">……</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vi</span><span class="params">(n)</span></span>;<span class="comment">//一般句法为vector&lt;typename&gt; vi(元素个数)，当没有括号时，元素个数为0；</span></span><br><span class="line"><span class="type">int</span> n;<span class="comment">//元素个数可为变量。</span></span><br><span class="line">cin&gt;&gt;n;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2模板类array"><a href="#8-2模板类array" class="headerlink" title="8.2模板类array"></a>8.2模板类array</h3><p>array对象长度固定，其句法如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;array&gt;</span></span></span><br><span class="line">……</span><br><span class="line">array&lt;<span class="type">int</span>,5&gt; ai;<span class="comment">//一般句法为array&lt;typename,元素个数且不能为变量&gt; arr ;</span></span><br><span class="line">array&lt;<span class="type">double</span>,4&gt; ad = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">2.1</span>,<span class="number">3</span>&#125;;<span class="comment">//可进行列表初始化。</span></span><br><span class="line"></span><br><span class="line">ad.<span class="built_in">at</span>(<span class="number">2</span>) = <span class="number">2.3</span>;<span class="comment">//使用成员函数at()而不是标准数组法访问元素可避免错误，但遇错会终止运行。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="9-附加"><a href="#9-附加" class="headerlink" title="9.附加"></a>9.附加</h2><h3 id="9-1-char类型"><a href="#9-1-char类型" class="headerlink" title="9.1 char类型"></a>9.1 char类型</h3><p>如果要输入一行，则需使用**cin.getline()<strong>或者</strong>cin.get()**，括号若为空则读取空白；</p>
+<p>如果要添加字符串，则需使用<strong>strcpy</strong>（粘贴变量名，被复制变量名），这是一种覆盖原内容的方式；或是使用<strong>strcat</strong>（粘贴变量名，被复制变量名），这种把被复制内容添加到原内容后面；或是使用<strong>strncpy</strong>（粘贴变量名，被复制变量名，字符个数），这种会自动在末尾添加空格，避免超出内存。</p>
+<h3 id="9-2-string类型"><a href="#9-2-string类型" class="headerlink" title="9.2 string类型"></a>9.2 string类型</h3><p>如果要输入一行，则需使用 getline.(cin,变量名)；</p>
+<p>如果要覆盖字符串内容，可进行赋值运算；</p>
+<p>如果要添加字符串，可使用 + 号。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/" data-id="clejwi8xk0004jotxehkw7kby" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

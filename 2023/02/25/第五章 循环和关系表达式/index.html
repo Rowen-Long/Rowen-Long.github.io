@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第五章 循环和关系表达式5.1 for 循环5.1.1 for循环包含控制部分和循环体。控制部分如下： 1for (初始化；测试；更新操作)  有如下例子： 1234int i;for (i &#x3D; 0; i &lt; 5; i++)&#x2F;&#x2F;也可写成（int i &#x3D; 0; i &lt; 5; i++），即在括号中进行声明初始化，但此时i只在循环中存在。    cout&lt;&lt;&quot;C++ k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第五章 循环和关系表达式5.1 for 循环5.1.1 for循环包含控制部分和循环体。控制部分如下： 1for (初始化；测试；更新操作)  有如下例子： 1234int i;for (i &#x3D; 0; i &lt; 5; i++)&#x2F;&#x2F;也可写成（int i &#x3D; 0; i &lt; 5; i++），即在括号中进行声明初始化，但此时i只在循环中存在。    cout&lt;&lt;&quot;C++ k">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-25T11:50:05.752Z">
+<meta property="article:modified_time" content="2023-01-28T06:40:33.707Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第五章 循环和关系表达式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2023-02-25T11:50:05.752Z" itemprop="datePublished">2023-02-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第五章-循环和关系表达式"><a href="#第五章-循环和关系表达式" class="headerlink" title="第五章 循环和关系表达式"></a>第五章 循环和关系表达式</h1><h2 id="5-1-for-循环"><a href="#5-1-for-循环" class="headerlink" title="5.1 for 循环"></a>5.1 for 循环</h2><h3 id="5-1-1-for循环包含控制部分和循环体。"><a href="#5-1-1-for循环包含控制部分和循环体。" class="headerlink" title="5.1.1 for循环包含控制部分和循环体。"></a><strong>5.1.1</strong> for循环包含<strong>控制部分</strong>和<strong>循环体</strong>。</h3><p>控制部分如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (初始化；测试；更新操作)</span><br></pre></td></tr></table></figure>
+
+<p>有如下例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)<span class="comment">//也可写成（int i = 0; i &lt; 5; i++），即在括号中进行声明初始化，但此时i只在循环中存在。</span></span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;C++ knows loops.&quot;</span>&lt;&lt;endl;<span class="comment">//将该句子打印五次。</span></span><br><span class="line">cout &lt;&lt;<span class="string">&quot;C++ knows when to stop.&quot;</span>&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-2-在for的测试中，用bool类型判断循环是否继续。"><a href="#5-1-2-在for的测试中，用bool类型判断循环是否继续。" class="headerlink" title="5.1.2 在for的测试中，用bool类型判断循环是否继续。"></a><strong>5.1.2</strong> 在for的测试中，用<strong>bool类型</strong>判断循环是否继续。</h3><p>在用cout打印不等式时，默认输出int值（即0或1），可用**cout.setf(ios_::boolalpha)**来打印true或false。</p>
+<h3 id="5-1-3-对于上述提到的递增、递减运算符，有如下性质（已递增为例）："><a href="#5-1-3-对于上述提到的递增、递减运算符，有如下性质（已递增为例）：" class="headerlink" title="5.1.3 对于上述提到的递增、递减运算符，有如下性质（已递增为例）："></a><strong>5.1.3</strong> 对于上述提到的<strong>递增、递减运算符</strong>，有如下性质（已递增为例）：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> b = a++;<span class="comment">//此时a为2，b为1。</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> c = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> d = ++c;<span class="comment">//此时c和d都为2。</span></span><br><span class="line"><span class="comment">//即当加号在后面，是计算完表达式再加1；当加号在前面，是先加1再计算表达式。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-4-组合赋值运算符合并了计算和赋值，如下："><a href="#5-1-4-组合赋值运算符合并了计算和赋值，如下：" class="headerlink" title="5.1.4 组合赋值运算符合并了计算和赋值，如下："></a><strong>5.1.4</strong> <strong>组合赋值运算</strong>符合并了计算和赋值，如下：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>；</span><br><span class="line">a += <span class="number">1</span>；<span class="comment">//意为把a＋1即2赋值给a。</span></span><br></pre></td></tr></table></figure>
+
+<p>它的左边操作数必须是可以赋值的，如变量，数组元素，指针解除引用标识或结构成员。</p>
+<p>类似的还有-&#x3D;，*&#x3D;，&#x2F;&#x3D;，%&#x3D;。</p>
+<h3 id="5-1-5-可用-构建循环的复合语句。"><a href="#5-1-5-可用-构建循环的复合语句。" class="headerlink" title="5.1.5 可用{}构建循环的复合语句。"></a><strong>5.1.5</strong> 可用{}构建循环的复合语句。</h3><h3 id="5-1-6-基于范围的for循环"><a href="#5-1-6-基于范围的for循环" class="headerlink" title="5.1.6 基于范围的for循环"></a>5.1.6 基于范围的for循环</h3><p>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> prices[<span class="number">5</span>] = &#123;<span class="number">4.99</span>, <span class="number">10.99</span>, <span class="number">23.1</span>, <span class="number">22.2</span>, <span class="number">321.32</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">double</span> x : prices)</span><br><span class="line">	cout&lt;&lt; x &lt;&lt; endl;<span class="comment">//该程序将依次打印prices数组里的数。</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span> (<span class="type">double</span> &amp;x : prices)</span><br><span class="line">	x = x * <span class="number">0.8</span>;<span class="comment">//该程序允许修改x的值，但上面那种程序不行，因为这里有引用变量 &amp;x。</span></span><br><span class="line">	</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> x : &#123;<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>&#125;)</span><br><span class="line"> cout&lt;&lt; x &lt;&lt; <span class="string">&quot; &quot;</span>;<span class="comment">//结合for循环和初始化列表。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-6-可用逗号来复合表达式。"><a href="#5-1-6-可用逗号来复合表达式。" class="headerlink" title="5.1.6 可用逗号来复合表达式。"></a><strong>5.1.6</strong> 可用逗号来复合表达式。</h3><p>逗号表达式的值是<strong>第二部分</strong>的值，如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i,j;</span><br><span class="line">i = <span class="number">20</span>, j = <span class="number">2</span> * i;<span class="comment">//此条表达式的值是40</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-1-7-strcmp（）函数"><a href="#5-1-7-strcmp（）函数" class="headerlink" title="5.1.7  strcmp（）函数"></a>5.1.7  strcmp（）函数</h3><p>可用<strong>strcmp</strong>（字符串1（可为数组名），字符串2）来比较字符串是否相等。（只可用于<strong>char类型</strong>）</p>
+<p>如果字符串1按字母顺序在第二个字符串前面，则返回一个负数值，如果相等则为0，如果在后面则为正数值。注意，大写字母在小写字母前面。</p>
+<h3 id="5-1-8-比较string类字符串"><a href="#5-1-8-比较string类字符串" class="headerlink" title="5.1.8 比较string类字符串"></a>5.1.8 比较string类字符串</h3><p>可直接用<strong>关系运算符</strong>进行比较，只要有<strong>至少一个</strong>为<strong>string</strong>类型。</p>
+<h2 id="5-2-while循环"><a href="#5-2-while循环" class="headerlink" title="5.2 while循环"></a>5.2 while循环</h2><h3 id="5-2-1-while循环是没有初始化和更新部分的for循环，它只有测试条件，"><a href="#5-2-1-while循环是没有初始化和更新部分的for循环，它只有测试条件，" class="headerlink" title="5.2.1 while循环是没有初始化和更新部分的for循环，它只有测试条件，"></a>5.2.1 while循环是没有初始化和更新部分的for循环，它只有测试条件，</h3><p>即 while （test—condition）</p>
+<p>​				body</p>
+<h3 id="5-2-2-用clock（）和头文件ctime创建延迟循环"><a href="#5-2-2-用clock（）和头文件ctime创建延迟循环" class="headerlink" title="5.2.2 用clock（）和头文件ctime创建延迟循环"></a>5.2.2 用clock（）和头文件ctime创建延迟循环</h3><p>CLOCK_PER_SEC为符号常量，clock_t为clock（）的别名。</p>
+<h3 id="5-2-3-创建别名"><a href="#5-2-3-创建别名" class="headerlink" title="5.2.3 创建别名"></a>5.2.3 创建别名</h3><p>可用#define，如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> BYTE char<span class="comment">//将所有BYTE替换为char类型。</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>也可用typedef，如</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span> BYTE<span class="comment">//通用格式为typedef typename aliasName。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-3-do-while循环"><a href="#5-3-do-while循环" class="headerlink" title="5.3 do while循环"></a>5.3 do while循环</h2><h3 id="5-3-1-基本内容"><a href="#5-3-1-基本内容" class="headerlink" title="5.3.1 基本内容"></a>5.3.1 基本内容</h3><p>do while不同于for和while循环，它先执行循环体，再判定测试表达式，决定是否继续循环。</p>
+<p>其通用格式如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">	body</span><br><span class="line"><span class="keyword">while</span> （test—expression）；</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="5-4-二维数组和嵌套循环"><a href="#5-4-二维数组和嵌套循环" class="headerlink" title="5.4 二维数组和嵌套循环"></a>5.4 二维数组和嵌套循环</h2><h3 id="5-4-1-二维数组"><a href="#5-4-1-二维数组" class="headerlink" title="5.4.1 二维数组"></a>5.4.1 二维数组</h3><p>创建如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> maxtemps [<span class="number">4</span>][<span class="number">5</span>];<span class="comment">//可把第一个看成行，第二个看成列。</span></span><br></pre></td></tr></table></figure>
+
+<p>且可以列表初始化，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> numbers [<span class="number">2</span>][<span class="number">2</span>] = </span><br><span class="line">&#123;</span><br><span class="line">	&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,<span class="comment">//第一行。</span></span><br><span class="line">	&#123;<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">//第二行。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="clejwi8xi0001jotxdl1icqyx" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/02/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E5%87%BD%E6%95%B0%E6%8E%A2%E5%B9%BD/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/25/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%85%B3%E7%B3%BB%E8%A1%A8%E8%BE%BE%E5%BC%8F/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
